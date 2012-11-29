@@ -38,7 +38,7 @@
 // interrupt should fire.
 DWORD gLastInterruptTime;
 
-LC3Sound * soundPtr = NULL;
+static LC3Sound * soundPtr = NULL;
 
 // The standard DLL entry point.  This function is not necessary.  It called by
 // the Win32 framework.  One time initialization and cleanup should occur here.
