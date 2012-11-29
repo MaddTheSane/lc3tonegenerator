@@ -1,0 +1,7 @@
+Debug
+Release
+ipch
+SoundComponent.vcxproj.user
+TestProgram/TestProgram/Debug
+TestProgram/TestProgram/Release
+TestProgram/TestProgram/TestProgram.vcxproj.user
