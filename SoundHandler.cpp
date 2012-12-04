@@ -110,7 +110,7 @@ bool LC3Sound::DirectSave( char* sndData)
 {
 	if(tableIndex != 0)
 	{
-		timeLeft -= 10;
+		timeLeft -= 1;
 		if(timeLeft <= 0)
 		{
 			PopTable();
