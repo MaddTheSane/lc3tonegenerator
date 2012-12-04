@@ -180,18 +180,13 @@ LC_API void ExecuteReservedOpcode3(GetValueMethod GetValue, SetValueMethod SetVa
 		break;
 
 	case -1:
+	default:
 		PSRMod = 4;
 		break;
 
 	case 1:
 		PSRMod = 1;
 		break;
-
-	default:
-		PSRMod = 4;
-		break;
-
-
 	}
 
 	if(SetValue(LCEXT_PSR, PSRMod) !=LCEXT_SUCCESS)
