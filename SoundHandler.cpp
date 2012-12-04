@@ -151,24 +151,16 @@ void LC3Sound::TimeProc(
 
 	if(++timersema==1)
 	{
-		//MADDriverRec	*WinMADDriver = (MADDriverRec*) dwUser;
-		
 		lpSwSamp->GetCurrentPosition( &pos, &posp);
 		
-		//if(pos > BUFSIZE )
 		{
-			//WinMADDriver->OnOff = false;
 			
 			if( !DirectSave( soundData))
 			{
 				memset(soundData, 0x80, BUFSIZE);
-				//memset(soundData, 0, BUFSIZE);
 			}
 			
-			if( !WriteDataToBuffer( lpSwSamp, 0, (unsigned char*) soundData, BUFSIZE))
-			{
-				//DEBUG 	debugger("ERR");
-			}
+			WriteDataToBuffer( lpSwSamp, 0, (unsigned char*) soundData, BUFSIZE);
 		}
 		
 	}
@@ -214,7 +206,6 @@ BOOL LC3Sound::AppCreateWritePrimaryBuffer(
             (*lplpDsb)->Play(0, 0, DSBPLAY_LOOPING);
             return TRUE;
         }
-        //DEBUG else debugger( TranslateDSError( hr));
     }
     // If we got here, then we failed SetCooperativeLevel.
     // CreateSoundBuffer, or SetFormat.
@@ -256,7 +247,6 @@ LC3Sound::~LC3Sound()
 	timeEndPeriod( 20);
 	timeKillEvent( gwid);
 
-	
 	lpSwSamp->Stop();
 	lpSwSamp->Release();
 	lpSwSamp = NULL;

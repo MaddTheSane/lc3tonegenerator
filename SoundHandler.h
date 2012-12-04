@@ -35,7 +35,7 @@ private:
 	HWND hwnd;
 	UINT gwid;
 	char *soundData;
-	GUID soundGUID;
+	//GUID soundGUID;
 	LPDIRECTSOUND			lpDirectSound;									// The LPDIRECTSOUND to apply & get informations, etc.
 	LPDIRECTSOUNDBUFFER		lpDirectSoundBuffer, lpSwSamp;
 public:
